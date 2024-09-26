@@ -11,11 +11,12 @@
 %   - Net primary production                                              %
 %   - Particulate fluxes                                                  %
 %   - Zooplankton biomass                                                 %
+%   - Bacteria production                                                 %
 %                                                                         %
 %   WRITTEN BY A. RUFAS, UNIVERISTY OF OXFORD                             %
 %   Anna.RufasBlanco@earth.ox.ac.uk                                       %
 %                                                                         %
-%   Version 1.0 - Completed 15 Sep 2024                                   %
+%   Version 1.0 - Completed 22 Sep 2024                                   %
 %                                                                         %
 % ======================================================================= %
 
@@ -78,7 +79,7 @@ for iVar = 1:height(oceanVarsLabel)
         yMin = 0;
         yMax = 2000;
         yStep = 500; 
-    elseif (iVar == 10)
+    elseif (iVar == 10 || iVar == 11)
         yMin = 0;
         yMax = 1000;
         yStep = 200;
@@ -305,7 +306,7 @@ end
 % =========================================================================
 %%
 % -------------------------------------------------------------------------
-% SECTION 5 - OFP FLUX DATA (FOR COMPLETION)
+% SECTION 5 - OFP FLUX DATA
 % -------------------------------------------------------------------------
 
 % Read in the file into a Matlab table
@@ -346,7 +347,7 @@ for iVar = 1:height(oceanVarsLabel)
     varValues = ofpFlux.(varName);
     varDepths = ofpFlux.depth;
     varDates  = datenum(ofpFlux.Mid_Date);
-
+    
     plotOdvStyle(varValues,...                         % ocean variable to plot
                  varDepths,...                         % y values
                  varDates,...                          % x values
@@ -374,6 +375,8 @@ for iVar = 1:height(oceanVarsLabel)
     varLabel  = oceanVarsLabel{iVar,2};
     varValues = ofpFlux.(varName)(ofpFlux.depth == 500);
     varDates  = ofpFlux.Mid_Date(ofpFlux.depth == 500);
+%     disp(mean(varValues,'omitnan'))
+%     disp(std(varValues,'omitnan'))
 
     plotVariableOverTime(varDates(~isnan(varValues)),...          % x values
                          varValues(~isnan(varValues)),...         % y values
@@ -404,6 +407,30 @@ plotZooplankton(batsZooDepthIntegrated,... % data (mg DW m-2)
                 0,800,200)                 % y-axis values
     
 % =========================================================================
+%%
+% -------------------------------------------------------------------------
+% SECTION 7 - BACTERIA PRODUCTION DATA
+% -------------------------------------------------------------------------
+
+% Read in the file into a Matlab table
+filenameBac = 'bats_bacteria_production.txt';
+[batsBacteria] = processRawBatsBacteria(fullfile('data',filenameBac));
+
+% Plotting configuration
+xMin = datetime(1991,01,01);
+xMax = datetime(2012,01,01);
+xStep = calyears(2);
+
+plotOdvStyle(batsBacteria.thy,...               % ocean variable to plot
+             batsBacteria.dep1,...              % y values
+             datenum(batsBacteria.yymmdd),...   % x values
+             xMin,xMax,xStep,...                % x limits (xmin, xmax, xstep)
+             0,1000,100,...                     % y limits (ymin, ymax, ystep)
+             0,0.8,0.10,...                     % colour bar limits (cmin, cmax, cstep) – mg C m-3 d-1
+             1,...                              % anomaly
+             'Bacteria growth rate (pmol L^{-1} h^{-1})',... % colour bar string
+             'bats_bacteriagrowth')             % figure name tag
+            
 %%
 % -------------------------------------------------------------------------
 % LOCAL FUNCTIONS
