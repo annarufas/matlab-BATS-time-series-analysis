@@ -1,6 +1,6 @@
 externalresources/*
-bermuda_ocean_data.pptx
 data/*
 figures/*
+tests/
 README_cover.png
 .DS_Store
