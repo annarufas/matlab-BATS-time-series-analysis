@@ -1,5 +1,5 @@
-externalresources/*
-data/*
+resources/*
+data/raw/*
 figures/*
 tests/
 README_cover.png
