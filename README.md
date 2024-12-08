@@ -57,4 +57,4 @@ These datasets cover a range of oceanographic parameters, and the provided MATLA
 
 If you use this repository in your research, please cite it as:
 
-> Rufas, A. (2024). annarufas/matlab-BATS-time-series-analysis (v1.0) [collection]. Zenodo.
+> Rufas, A. (2024). annarufas/matlab-BATS-time-series-analysis: Initial release (v1.0.0) [collection]. Zenodo. https://doi.org/10.5281/zenodo.14316960
