@@ -1,4 +1,4 @@
-function [batsFlux] = processRawBatsFlux(fullpathFile)
+function batsFlux = processRawBatsFlux(fullpathFile)
 
     % Read the file into a table
     opts = detectImportOptions(fullpathFile);

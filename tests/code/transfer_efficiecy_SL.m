@@ -1,13 +1,18 @@
 
-% -------------------------------------------------------------------------
-% Visualization of BATS and OFP Flux Data
-% -------------------------------------------------------------------------
-% This script visualizes BATS and OFP flux data from their respective 
-% observation start dates and investigates the relationship between NPP 
-% and effective temperature (Teff) through the ocean column (500–1500 m).
-% -------------------------------------------------------------------------
-close all; clear; clc;
+% ----------------------------------------------------------------------- %
+% Visualization of BATS and OFP Flux Data                                 %
+% ----------------------------------------------------------------------- %
+% This script visualizes BATS and OFP flux data from their respective     %
+% observation start dates and investigates the relationship between NPP   % 
+% and effective temperature (Teff) through the ocean column (500–1500 m). %
+%                                                                         %
+%   WRITTEN BY S. LI, UNIVERISTY OF OXFORD                                %
+%                                                                         %
+%   Version 1.0 - Completed 26 Nov 2024                                   %
+%                                                                         %
+% ======================================================================= %
 
+close all; clear; clc;
 
 % -------------------------------------------------------------------------
 % Load Data into Tables
