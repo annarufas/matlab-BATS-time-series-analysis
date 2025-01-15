@@ -1,0 +1,20 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  annarufas/matlab-BATS-time-series-analysis: Analysing the
+  Bermuda Atlantic Time-series Study (BATS) Data in MATLAB
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Anna
+    family-names: Rufas
+    orcid: 'https://orcid.org/0000-0003-3800-8879'
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.14316959
+version: '1.0'
+date-released: '2024-12-08'
