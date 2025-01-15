@@ -1,6 +1,7 @@
 ## Analysing the Bermuda Atlantic Time-series Study (BATS) Data in MATLAB
 
 ![README_cover](https://github.com/user-attachments/assets/6eaf1907-f037-4b2d-bf75-f439c3d95c6b)
+*Time-series of seawater density at BATS.*
 
 The **Bermuda Atlantic Time-series Study (BATS)** is the world's longest continuous series of biogeochemical observations. While the data are [open access](https://bios.asu.edu/bats/bats-data), users are responsible for writing their own code to read, process and visualise it.
 
@@ -9,6 +10,8 @@ This repository contains a collection of scripts I developed to streamline the p
 These scripts were created specifically for the Oxford 4th-year undergraduate field trip course. The visualisations closely follow the style of the **Ocean Data View ([ODV](https://odv.awi.de))** platform, aligning with the tool the students use during their lab sessions. These visualisations primarily consist of contour plots, which display data over both depth and time, with scatter points representing the measurements.
 
 ## Requirements
+
+*⚠️ Note: These instructions are designed and tested specifically for macOS. While they may work on other operating systems (e.g., Windows or Linux), you might need to adapt the installation code accordingly.*
 
 To use the content of this repository, ensure you have the following.
 - [MATLAB](https://mathworks.com/products/matlab.html) version R2021a or later installed.
@@ -52,9 +55,3 @@ These datasets cover a range of oceanographic parameters, and the provided MATLA
 | 16  | plotVariableOverTime.m    | Plot time-series data (not ODV style plot)   |
 | 17  | plotTrends.m              | Plot to visualise trends over time (not ODV style plot)    |
 | 19  | plotCycles.m              | Plot to visualise periodic cycles in the data  (not ODV style plot)  |
-
-## Cite as
-
-If you use this repository in your research, please cite it as:
-
-> Rufas, A. (2024). annarufas/matlab-BATS-time-series-analysis: Initial release (v1.0.0) [collection]. Zenodo. https://doi.org/10.5281/zenodo.14316960
