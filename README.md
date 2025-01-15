@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14316959.svg)](https://doi.org/10.5281/zenodo.14316959)
+
 ## Analysing the Bermuda Atlantic Time-series Study (BATS) Data in MATLAB
 
 ![README_cover](https://github.com/user-attachments/assets/6eaf1907-f037-4b2d-bf75-f439c3d95c6b)
